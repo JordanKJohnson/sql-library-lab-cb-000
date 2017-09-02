@@ -8,7 +8,7 @@ end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT species,count(characters.species) from characters where characters.species = 'human' order by count(characters.species) desc limit 1"
+  "SELECT species,count(characters.species) from characters group by character.species order by count(characters.species) desc limit 1"
 end
 
 def select_name_and_series_subgenres_of_authors
