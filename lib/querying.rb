@@ -1,5 +1,5 @@
 def select_books_titles_and_years_in_first_series_order_by_year
-  "SELECT title,year from books where books.series_id = (SELECT series.id from series order by id asc limit 1) group by books.series_id order by year asc"
+  "SELECT title,year from books where books.series_id = (SELECT series.id from series order by id asc limit 1) group by books.title order by year asc"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
