@@ -20,5 +20,5 @@ def select_series_title_with_most_human_characters
 end
 
 def select_character_names_and_number_of_books_they_are_in
-  "SELECT name,count(books.id) as booknum from characters inner join series on characters.series_id = series.id INNER JOIN books on books.series_id = characters.series_id;"
+  "SELECT name,count(books.id) as booknum from characters inner join series on characters.series_id = series.id INNER JOIN books on books.series_id = characters.series_id GROUP BY characters.id;"
 end
